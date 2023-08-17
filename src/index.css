@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +18,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  margin: 0 auto;
 }
 
 a {
@@ -36,8 +46,12 @@ h1 {
   line-height: 1.1;
 }
 
+.status {
+  margin-bottom: 1em;
+  font-weight: bolder;
+}
+
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -48,12 +62,47 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #e2e2e2;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+button.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 80px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* div.board-row.first-row button:nth-child(1),
+div.board-row.first-row button:nth-child(2),
+div.board-row.second-row button:nth-child(1),
+div.board-row.second-row button:nth-child(2),
+div.board-row.third-row button:nth-child(1),
+div.board-row.third-row button:nth-child(2) {
+  border-right: 2px solid #333;
+} */
+
+/* div.board-row.first-row button,
+div.board-row.second-row button {
+  border-bottom: 2px solid #333;
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -66,4 +115,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.game-info li {
+  margin-bottom: 5px;
 }
