@@ -32,6 +32,14 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
+      <div className="credits">
+        <h3>Team Members</h3>
+        <ul>
+          <li>Ochiba Gabriel</li>
+          <li>Obinna David Okeke</li>
+          <li>Chizaram Igolo</li>
+        </ul>
+      </div>
       <div className="status">{status}</div>
       <div className="board-row first-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
