@@ -36,14 +36,21 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  margin-top: 6%;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.credits {
+  margin-bottom: 1em;
+}
+
+.credits ul {
+  margin-left: 1.5em;
 }
 
 .status {
@@ -89,20 +96,6 @@ button.square {
   content: "";
   display: table;
 }
-
-/* div.board-row.first-row button:nth-child(1),
-div.board-row.first-row button:nth-child(2),
-div.board-row.second-row button:nth-child(1),
-div.board-row.second-row button:nth-child(2),
-div.board-row.third-row button:nth-child(1),
-div.board-row.third-row button:nth-child(2) {
-  border-right: 2px solid #333;
-} */
-
-/* div.board-row.first-row button,
-div.board-row.second-row button {
-  border-bottom: 2px solid #333;
-} */
 
 @media (prefers-color-scheme: light) {
   :root {
